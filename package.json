@@ -1,10 +1,12 @@
 {
-  "name": "validator-cloud",
+  "name": "metronome-parity",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "preferGlobal": true,
-  "bin": {},
+  "bin": {
+    "metec2": "./bin/index.js"
+  },
   "scripts": {
     "ec2": "node index.js"
   },

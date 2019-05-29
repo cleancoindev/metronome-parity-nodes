@@ -1,0 +1,38 @@
+{
+  "region": "us-east-1",
+  "apiVersion": "2016-11-15",
+  "amiId": {
+    "testnet": "ami-0727e06d9f664389f",
+     "mainnet": ""
+  },
+  "instanceName": "metronomeValidator",
+  "sg": {
+    "GroupName": "metronomeSG",
+    "sgRules": {
+      "IpPermissions": [
+        {
+          "FromPort": 8545,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0",
+              "Description": "eth geth attach ports"
+            }
+          ],
+          "ToPort": 8546
+        },
+        {
+          "FromPort": 8555,
+          "IpProtocol": "tcp",
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0",
+              "Description": "etc geth attach ports"
+            }
+          ],
+          "ToPort": 8556
+        }
+      ]
+    }
+  }
+}

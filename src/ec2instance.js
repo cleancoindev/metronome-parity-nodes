@@ -7,7 +7,7 @@ AWS.config.update({
   'apiVersion': config.apiVersion
 })
 
-var ec2 = new AWS.EC2()
+var ec2
 
 function createEC2 (awsProfile, nodeEnv, keyName, createNewKey) {
   if (awsProfile !== 'default') {
@@ -16,6 +16,7 @@ function createEC2 (awsProfile, nodeEnv, keyName, createNewKey) {
       'secretAccessKey': process.env.secretAccessKey
     })
   }
+  ec2 = new AWS.EC2()
   // Create EC2 service object
   var sgParams = {
     Description: config.sg.GroupName, /* required */

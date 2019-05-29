@@ -1,5 +1,8 @@
 var AWS = require('aws-sdk')
 var config = require('config')
+var defaultConfig = require('../config/default-config.json')
+const { merge } = require('lodash')
+config = merge({}, defaultConfig, config)
 const fs = require('fs')
 require('dotenv').load()
 AWS.config.update({
@@ -56,7 +59,7 @@ function createEC2 (awsProfile, nodeEnv, keyName, createNewKey) {
 }
 
 function launchEC2 (amiId, keyName, groupId) {
-  var userData = fs.readFileSync('./src/userData.txt').toString()
+  var userData = fs.readFileSync(__dirname.toString() + '/userData.txt').toString()
   userData = Buffer.from(userData).toString('base64')
   var params = {
     ImageId: amiId,

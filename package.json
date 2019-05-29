@@ -1,16 +1,28 @@
 {
-  "name": "metronome-parity",
-  "version": "1.0.0",
-  "description": "",
+  "name": "metronome-parity-nodes",
+  "version": "1.0.3",
+  "description": "metronome parity node for testnet",
   "main": "index.js",
-  "preferGlobal": true,
+  "preferGlobal": false,
   "bin": {
     "metec2": "./bin/index.js"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "metronome",
+    "parity",
+    "aws ec2"
+  ],
+  "homepage": "https://github.com/autonomoussoftware/metronome-parity-nodes/blob/master/README.md",
+  "bugs": {
+    "url": "https://github.com/autonomoussoftware/metronome-parity-nodes/issues"
   },
   "scripts": {
     "ec2": "node index.js"
   },
-  "author": "",
+  "author": "manoj@bloq.com",
+  "repository": "autonomoussoftware/metronome-parity-nodes",
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.1.2",
@@ -21,16 +33,13 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "mocha": "5.1.0",
-    "bn.js": "^4.11.8",
-    "patch-package": "^5.1.1"
+    "bn.js": "^4.11.8"
   },
   "dependencies": {
     "aws-sdk": "^2.444.0",
-    "commander": "^2.11.0",
     "config": "^2.0.1",
     "dotenv": "^6.2.0",
-    "inquirer": "^6.3.1",
-    "node-uuid": ">= 1.4.1",
-    "web3": "1.0.0-beta.37"
-  }
+    "inquirer": "^6.3.1"
+  },
+  "private": false
 }

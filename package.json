@@ -39,7 +39,7 @@
     "aws-sdk": "^2.444.0",
     "config": "^2.0.1",
     "dotenv": "^6.2.0",
-    "inquirer": "^6.3.1"
+    "inquirer": "^6.5.2"
   },
   "private": false
 }
